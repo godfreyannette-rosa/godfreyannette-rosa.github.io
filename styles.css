@@ -16,6 +16,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     padding: 15px 30px 15px 15px;
+    margin: 30px;
     align-items: stretch;
    justify-content: center;
 }
