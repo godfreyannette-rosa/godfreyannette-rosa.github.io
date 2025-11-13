@@ -6,51 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coby and Chloe's Wedding</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    
+}</style>
 </head> 
 
-<body margin=""0"">
-    <header id=""header-Id" class="header-class">
-        <img class="imageRound" src="kiss.jpg" border-radius="10%" width="100" height="80">
-        <h1>Welcome to Coby and Chloe's Wedding Website</h1>
-
+<body margin="0">
+    <header>
+<div class="dropdown">
+  <button class="dropbtn"><img class="buttonimage" src="menu.png"></button>
+  <div class="dropdown-content">
+    <a href="index.html">Home</a>
+    <a href="engagement.html">Engagement</a>
+    <a href="wedding.html">Wedding Day</a>
+    <a href="gift_registry.html">Gift Registry</a>
+  </div>
+</div>      
+        <img class="cobyChloe" src="Coby & Chloe2.png" >
     </header>
-    <div id="greeting"></div>
 
+    <img class="imageRound center" src="kiss.jpg"  width="15%" height="15%">
 
-       <center><h1>Save the Date May 2, 2026</h1>
+  
+
+    <!--<div id="greeting"></div>-->
+    <h2 class="counter">Wedding Day Countdown</h2>
+    <p  id="demo"> 
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 2, 2026 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
     
-    <h3><a href="#Engagement">Engagement ~  </a> <a href="#Wedding Day">Wedding Day ~  </a> <a href="#Registry">Registry  </a></h3>
-    </center>
-        <main>
-        <div class="inline">
-        <section id="'Engagement">
-            <h2>Engagement</h2>
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</p>
+
+      <h1>Save the Date May 2, 2026</h1>
+     
+<main>
+
+ <div class="flex-container">
+        <section class="flex-item">
+            <a class="noUndrln hover" href="Engagement.html"><h2>Engagement</h2></a>
         
-            <p>Coby and Chloe were engaged in Tokyo, Japan on August 29, 2025 at the <i>Rikugien Botanical Garden</i></p>
-            <img src="proposal.png" alt="Post Engagement Picture" height="275" width="200">
-            <img src="airport.jpg" alt="Post Engagement Picture" height="275" width="200">
+            <p class="paraLeft">Coby and Chloe were engaged in Tokyo, Japan on August 29, 2025 at the <i>Rikugien Botanical Garden</i></p>
+            <img class="flexShadow" src="proposal.png" alt="Post Engagement Picture" height="275" width="200">
+            <img class="flexShadow" src="airport.jpg" alt="Post Engagement Picture" height="275" width="200">
           <div class="intro">
              
-             <p>Salt Lake Airport homecoming from Japan trip. </p>
+             <p>Family greeting at the Salt Lake Airport coming home from Japan vacation. </p>
           </div>
-        </div>
+      </section>
 
-        </section>
+     
+      <section class="flex-item">
+            <a class="noUndrln" href="wedding.html"><h2>Wedding Day-Ceremony and Reception</h2></a>
+            <p class="paraLeft">The events will take place at The Caledonia in Layton, Utah.  <br> <a href="https://thecaledonia.co/"> Visit their website</a></p>
+            <img class="flexShadow" src="Caledonia.png" height="210" width="340">
+            <p class="paraLeft">For Google Maps directions, please click <a href="https://maps.app.goo.gl/amRGtVEpMwpy3A5b8"> here </a>.</p>
+       </section>
+        
 
-        <div class="inline">
-        <section id="Wedding Day">
-            <h2>Wedding Day-Ceremony and Reception</h2>
-            <p>The events will take place at The Caledonia in Layton, Utah. For Google Maps directions, please click <a href="https://maps.app.goo.gl/amRGtVEpMwpy3A5b8"> here </a>. <br> <a href="https://thecaledonia.co/"> Visit their website</a></p>
-            <img src="weddingcolors.jpg" height="210" width="140">
-        </section>
-        </div>
-
-        <div class="inline">
-        <section id="Registry">
-            <h2>Gift Registry</h2>
-            <p>Coby and Chloe are excited to have you be a part of their wedding celebrations. For help on what to get the 
+        
+        <section class="flex-item">
+            <h2><a class="noUndrln" href="gift_registry.html">Gift Registry</a></h2>
+            <p class="paraLeft">Coby and Chloe are excited to have you be a part of their wedding celebrations. For help on what to get the 
                 happy couple, you can find their gift registries below.</p>
-                <ul>
+                <ul class="paraLeft" >
                 <li>Amazon</li>
                 <li>Target</li>
                 <li>Crate and Barrel</li>
@@ -61,7 +106,7 @@
                 <img src="Amazon-Logo.png" height="75" "100">
                 <img src="Target-Logo.png" height="75" "100">
                 <a href="https://www.crateandbarrel.com/gift-registry/chloe-godfrey/r7417823" border="0"><img src="Crate-Barrel-Symbol.png" height="105" "100"></a>
-                <img src="Venmo-Emblem.png" height="75" "100">
+                <a href="venmo.html"><img src="Venmo-Emblem.png" height="75" "100"></a>
             </div>
         </section>
         </div>
@@ -69,7 +114,7 @@
 <br class="clearBoth" /><!-- you may or may not need this -->
 
         <footer class="centered">
-            Connect with me on
+            For your website needs connect with me on
             <br>
         <a href="https://www.linkedin.com/in/annette-godfrey-69549127/" target="_blank"><img src="logo.png" width="100" height=""30"></a>
 
